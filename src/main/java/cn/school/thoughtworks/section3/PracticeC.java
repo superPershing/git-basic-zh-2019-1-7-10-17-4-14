@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static cn.school.thoughtworks.section2.PracticeA.countStringWithMap;
+
 public class PracticeC {
     Map<String, Integer> createUpdatedCollection(List<String> collectionA, Map<String, List<String>> object) {
         //实现练习要求，并改写该行代码。
@@ -13,15 +15,7 @@ public class PracticeC {
     }
 
     Map<String, Integer> conutStrings(List<String> collection1) {
-        Map<String, Integer> result = new HashMap<>();
-        for (String s : collection1) {
-            if (result.containsKey(s)) {
-                result.put(s, result.get(s) + 1);
-            } else {
-                result.put(s, 1);
-            }
-        }
-        return result;
+        return countStringWithMap(collection1);
     }
 
     Map<String, Integer> getNewCollection(Map<String, Integer> collection1, Map<String, List<String>> object) {

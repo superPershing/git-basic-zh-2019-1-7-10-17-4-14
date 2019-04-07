@@ -17,9 +17,9 @@ public class PracticeD {
             String[] sList = s.split("-");
             if (sList.length == 2) {
                 if (result.containsKey(s)) {
-                    result.put(s, result.get(s) + Integer.parseInt(sList[1]));
+                    result.put(sList[0], result.get(sList[0]) + Integer.parseInt(sList[1]));
                 } else {
-                    result.put(s, Integer.parseInt(sList[1]));
+                    result.put(sList[0], Integer.parseInt(sList[1]));
                 }
             } else {
                 if (result.containsKey(s)) {
